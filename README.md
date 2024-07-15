@@ -43,3 +43,28 @@ Make sure you have the following software installed:
 
    ```sh
    git clone https://github.com/baris/RoleBasedAuthBackEnd.git
+
+2. Navigate into the project directory:
+  ```sh
+  cd RoleBasedAuthBackEnd
+
+### Running the Application
+
+1.Build the project using Maven:
+   ```sh
+  mvn clean install
+
+2.Run the application:
+  ```sh
+  mvn spring-boot:run
+
+ The application will start on http://localhost:8080.
+
+
+### Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or create a pull request on GitHub.
+
+
+
+
+   

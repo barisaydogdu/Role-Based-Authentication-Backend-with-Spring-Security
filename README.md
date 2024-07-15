@@ -1,70 +1,63 @@
-# RoleBasedAuthBackEnd
+# Role-Based Authentication Backend with Spring Security
 
-RoleBasedAuthBackEnd is a Maven project that implements role-based authentication and authorization using Spring Boot.
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running the Application](#running-the-application)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Introduction
-
-RoleBasedAuthBackEnd provides a backend solution for role-based access control (RBAC) using Spring Boot. It includes endpoints for managing user roles, permissions, and authentication.
+This repository contains a backend application demonstrating role-based authentication and authorization using Spring Security within a Spring Boot framework.
 
 ## Features
 
-- User authentication using Spring Security
-- Role management (create, read, update, delete roles)
-- Permission management (assign permissions to roles)
-- RESTful APIs for easy integration with frontend applications
+- **Authentication**: Secure login functionality with username and password.
+- **Authorization**: Role-based access control (RBAC) implemented using Spring Security.
+- **RESTful API**: Exposes endpoints for user management, authentication, and authorization.
+- **Error Handling**: Custom error handling for access denied scenarios.
+
+## Technologies Used
+
+- Java
+- Spring Boot
+- Spring Security
+- MySQL 
+- Maven 
 
 ## Getting Started
 
-Follow these instructions to get the project up and running on your local machine.
-
 ### Prerequisites
 
-Make sure you have the following software installed:
-
-- Java Development Kit (JDK) 17 or higher
-- Maven 3.8.4 or higher
-- Your favorite Java IDE (IntelliJ IDEA, Eclipse, etc.)
-
+- Java 17+
+- Maven 
+- MySQL
 ### Installation
 
 1. Clone the repository:
 
-   ```sh
-   git clone https://github.com/baris/RoleBasedAuthBackEnd.git
+    ```bash
+    git clone https://github.com/yourusername/role-based-auth-backend.git
+    cd role-based-auth-backend
+    ```
 
-2. Navigate into the project directory:
-  ```sh
-  cd RoleBasedAuthBackEnd
+2. Configure database connection in `application.properties`.
 
-### Running the Application
+3. Build and run the application:
 
-1.Build the project using Maven:
-   ```sh
-  mvn clean install
+    ```bash
+    # Using Maven
+    mvn spring-boot:run
 
-2.Run the application:
-  ```sh
-  mvn spring-boot:run
+4. Access the API at [http://localhost:8080/api](http://localhost:8080/api).
 
- The application will start on http://localhost:8080.
+## Usage
 
+- **Authentication**: Use `/login` endpoint to authenticate users and obtain JWT token.
 
-### Contributing
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or create a pull request on GitHub.
+### Endpoints
 
+- `/register`: POST endpoint for user registration.
+- `/login`: POST endpoint for user authentication.
+- `/admin_only`: GET endpoint accessible only to users with `ROLE_ADMIN` role.
 
+## Contributing
 
+Contributions are welcome! Please fork the repository and create a pull request with your improvements.
 
-   
+## Acknowledgements
+
+- [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)
+- [Baeldung Spring Security Tutorials](https://www.baeldung.com/spring-security)
